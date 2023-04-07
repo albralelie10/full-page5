@@ -1,5 +1,185 @@
-<p>Hellow World</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --font-size:1.2rem;
+            --font-style:"Times New Roman",serif;
+            --background-color-main:#008c80;
+            --background-color-header:#e39206;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            width:100%;
+            height:100vh;
+            font-style:var(--font-style);
+            font-size:var(--font-size)
+        }
+
+        .q{
+            border:1px solid black;
+        }
+        .grid{
+            display:grid;
+            width:100%;
+            height:100vh;
+            grid-template-columns:1fr minmax(55%,65%) 1fr;
+            grid-template-rows:0.5fr minmax(75%,90%) 0.3fr;
+        }
+        h1{
+            font-size:4rem;
+        }
+        h4{
+            font-size:3rem;
+        }   
+        .caja1{
+            grid-column-start:1;
+            grid-column-end:4;
+        }
+        .caja5{
+            grid-column-start:1;
+            grid-column-end:4;
+        }
+        .caja1{
+            background-color:var(--background-color-header);
+            display:flex;
+            align-items: center;
+            padding-left:20px;
+            padding:10px;
+        }
+        .caja2{
+            margin-left:10px;
+            padding:10px;
+            font-size:var(--font-size);
+            text-transform:capitalize;
+        }
+        .caja2 li{
+            background-color:var(--background-color-main);
+            margin-bottom:10px;
+            padding:10px;
+            list-style-type:none;
+            box-shadow:2px 3px 4px rgba(0,0,0,0.3), 3px 4px 5px rgba(0,0,0,0.5);
+            font-weight:bold;
+        }
+        .caja3{
+            padding:20px;
+            font-size:var(--font-size);
+            text-align:justify;
+        }
+        .caja4{
+       
+            margin:10px 0;
+            margin-right:10px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column;
+            text-transform:capitalize;
+            padding:10px;
+            background-color:var(--background-color-main);
+            text-align:center;
+            
+        }
+        .caja4 h4, .caja4 p{
+            margin-bottom:30px;
+        }
+        .caja5{
+            display:flex;
+            justify-content: center;
+            font-style:oblique;
+            background-color: var(--background-color-header);
+        }
+        @media screen and (max-width:1400px){
+            .grid{
+                grid-template-rows:0.3fr minmax(40%,55%) minmax(35%,50%) 0.3fr;
+                height:100vh;
+            }
+            .caja3{
+                grid-column-start:2;
+                grid-column-end:4;
+            }
+            .caja4{
+                grid-row-start:3;
+                grid-column-start:1;
+                grid-column-end:4;
+                padding:0;
+                margin:0;
+                display:block;
+                padding-top:10px;
+            }
+            .caja4 h4, .caja4 p{
+                margin:0;
+            }
+            .caja5{
+                grid-row-start:4;
+                grid-column-start:1;
+                grid-column-end:4;
+            }
+        }
+        @media screen and (max-width:800px){
+            .grid{
+                display:flex;
+                justify-content: center;
+                align-items:center;
+                flex-direction:column;
+                height:auto;
+            }
+            .caja1, .caja2 , .caja li , .caja3 , .caja4 , .caja5{
+                width:100%;
+            }
+        }
+
+        @media screen and (min-width:1700px){
+            body{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .grid{
+                width:1800px;
+                height:900px;
+            }
+        }
 
 
-<a>Link to my web site</a>
-
+        
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="caja1 q">
+            <h1>Tokio City</h1>
+        </div>
+        <div class="caja2 q">
+            <li>The city</li>
+            <li>the island</li>
+            <li>the clime</li>
+            <li>the food</li>
+            <li>the fly </li>
+        </div>
+        <div class="caja3 q">
+            <h4>Tokio </h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores corporis iste rem facere neque saepe suscipit obcaecati voluptatum. Ea beatae officiis atque temporibus consectetur rem, magnam et qui optio. In pariatur error eos fugit non, nesciunt placeat iure commodi exercitationem.</p>
+        </div>
+        <div class="caja4 q">
+            <h4>What?</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nemo accusamus quaerat.</p>
+            <h4>Who?</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem adipisci neque et maxime.</p>
+            <h4>where?</h4>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus et minima ipsam dolorem voluptas.</p>
+        </div>
+        <div class="caja5 q">
+            <p>Derechos reservados &copy;www.index.com 2012-2022</p>
+        </div> 
+    </div>
+</body>
+</html>
